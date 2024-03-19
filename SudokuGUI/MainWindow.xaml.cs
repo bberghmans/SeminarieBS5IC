@@ -16,14 +16,41 @@ namespace SudokuGUI
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        TextBox[,] sudokuWaardes = new TextBox[9, 9];
+
         public MainWindow()
         {
             InitializeComponent();
 
-            int rijnummer = Grid.GetRow(Knop1);
-            RowDefinition rowDef = MainGrid.RowDefinitions[rijnummer];
+            Label1.Content = "Dit is een label";
+
+
+            for (int rij  = 0; rij < 9; rij++)
+            {
+                for (int kol =  0; kol < 9; kol++)
+                {
+                    TextBox sudokuWaarde = new TextBox();
+                    sudokuWaardes[rij, kol] = sudokuWaarde;
+
+                    SudokuGrid.
+                }
+            }
+
+
+
+
+
+
+            //int rijnummer = Grid.GetRow(Knop1);
+            //RowDefinition rowDef = MainGrid.RowDefinitions[rijnummer];
 
             Knop1.Content = "knop1";
+
+        }
+
+        private void Knop1_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }
